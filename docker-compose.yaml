@@ -1,14 +1,15 @@
-version: "3.8"
-
 services:
   pb-go:
-    image: 5keeve/pocketbook-go-sdk:6.3.0-b288-v1
+    #image: 5keeve/pocketbook-go-sdk:6.3.0-b288-v1
     build:
       context: .
     entrypoint:
     - /go/bin/go
     command:
     - build
+    environment:
+      GO111MODULE: off
+    #working_dir: /app
     volumes:
     - type: bind
       source: ./examples

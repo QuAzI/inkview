@@ -35,6 +35,8 @@ To build this image on your own, feel free to use `docker-compose.yaml`.
 
 ```bash
 docker-compose build
+
+docker compose run --rm pb-go build -C devinfo
 ```
 
 This will create a `pb-go` service which can be used to compile a go program.
